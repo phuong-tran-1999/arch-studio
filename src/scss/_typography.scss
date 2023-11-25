@@ -4,7 +4,8 @@ body {
 
 .heading {
     &--xl {
-        font-weight: var(--fw-bold);
+        --fw-xl: var(--fw-bold);
+        font-weight: var(--fw-xl);
         font-size: 15.625rem;
         line-height: 0.8;
         letter-spacing: -5px;

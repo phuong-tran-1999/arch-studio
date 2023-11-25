@@ -1,0 +1,27 @@
+{
+    "name": "header",
+    "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "modules/shared/layout/header/src",
+    "prefix": "fm",
+    "tags": ["type:shared-layout"],
+    "projectType": "library",
+    "targets": {
+        "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+            "options": {
+                "jestConfig": "modules/shared/layout/header/jest.config.ts"
+            }
+        },
+        "lint": {
+            "executor": "@nx/eslint:lint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": [
+                    "modules/shared/layout/header/**/*.ts",
+                    "modules/shared/layout/header/**/*.html"
+                ]
+            }
+        }
+    }
+}
