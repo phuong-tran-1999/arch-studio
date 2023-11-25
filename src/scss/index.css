@@ -3,4 +3,5 @@
 @import url('./_reset.scss') layer(reset);
 @import url('./_variables.scss') layer(reset);
 @import url('./_typography.scss') layer(component);
+@import url('./_layout.scss') layer(component);
 @import url('./_utility.scss') layer(utitlity);
