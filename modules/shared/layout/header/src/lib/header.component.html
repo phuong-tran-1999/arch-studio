@@ -1,2 +1,21 @@
-<p>header works!</p>
-<img src="assets/images/arch-logo.svg" alt="" />
+<header>
+    <a routerLink="/">
+        <img src="assets/images/arch-logo.svg" alt="Logo" loading="eager" />
+    </a>
+
+    <button [cdkMenuTriggerFor]="menu">
+        <img
+            src="assets/icons/hamburger-icon.svg"
+            alt="Menu Icon"
+            loading="eager"
+        />
+    </button>
+</header>
+
+<ng-template #menu>
+    <nav cdkMenu class="menu">
+        <a routerLink="/" cdkMenuItem>Fortfolio</a>
+        <a routerLink="/" cdkMenuItem>About Us</a>
+        <a routerLink="/" cdkMenuItem>Contact</a>
+    </nav>
+</ng-template>
