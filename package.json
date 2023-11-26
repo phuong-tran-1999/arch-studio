@@ -7,7 +7,7 @@
         "build": "nx build",
         "test": "nx test",
         "graph": "nx graph",
-        "build-ghpage": "nx run arch-studio:build --outputPath=docs --baseHref=https://phuong-tran-1999.github.io/arch-studio/"
+        "build-ghpage": "nx run arch-studio:build --outputPath=docs --baseHref=arch-studio"
     },
     "private": true,
     "dependencies": {
