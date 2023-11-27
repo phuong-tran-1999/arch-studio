@@ -1,45 +1,47 @@
 body {
     font-family: var(--ff);
-}
-
-.heading {
-    &--xl {
-        --fw-xl: var(--fw-bold);
-        font-weight: var(--fw-xl);
-        font-size: 15.625rem;
-        line-height: 0.8;
-        letter-spacing: -5px;
-    }
-
-    &--l {
-        font-weight: var(--fw-bold);
-        font-size: 6rem;
-        line-height: 0.8333;
-        letter-spacing: -2px;
-    }
-
-    &--m {
-        font-weight: var(--fw-bold);
-        font-size: 4.5rem;
-        line-height: 0.875;
-        letter-spacing: -2px;
-    }
-
-    &--s {
-        font-weight: var(--fw-bold);
-        font-size: 2rem;
-        line-height: 1.25;
-    }
-}
-
-.body {
     font-weight: var(--fw-normal);
-    font-size: 1.125rem;
+    font-size: 1.125rem; // 18px
     line-height: 1.333;
 }
 
+.heading {
+    --_fs: 2rem;
+    --_lh: 1.25;
+    --_ls: unset;
+
+    font-weight: var(--fw-bold);
+    font-size: var(--_fs);
+    line-height: var(--_lh);
+    letter-spacing: var(--_ls);
+
+    &--xl {
+        --_fs: 15.625rem; // 250px
+        --_lh: 0.8;
+        --_ls: -5px;
+    }
+
+    &--l {
+        --_fs: 6rem; // 96px;
+        --_lh: 0.8333;
+        --_ls: -2px;
+    }
+
+    &--m {
+        --_fs: 4.5rem; // 72px
+        --_lh: 0.875;
+        --_ls: -2px;
+    }
+}
+
+// .body {
+//     font-weight: var(--fw-normal);
+//     font-size: 1.125rem; // 18px
+//     line-height: 1.333;
+// }
+
 .sub-heading {
     font-weight: var(--fw-bold);
-    font-size: 1.125rem;
+    font-size: 1.125rem; // 18px
     line-height: 2;
 }

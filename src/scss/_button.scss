@@ -1,0 +1,29 @@
+.btn {
+    --_p-x: 2rem;
+    --_p-y: 1.5rem;
+    --_gap: 1.5rem;
+
+    --_clr: var(--clr-white);
+    --_bg: var(--clr-dark-blue);
+    --_bg-hover: var(--clr-dark-gray);
+    --_bg-active: var(--clr-light-gray);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: var(--_gap);
+    padding: var(--_p-y) var(--_p-x);
+
+    color: var(--_clr);
+    background-color: var(--_bg);
+    text-transform: capitalize;
+
+    &:hover {
+        background-color: var(--_bg-hover);
+    }
+
+    &:active {
+        background-color: var(--_bg-active);
+    }
+}

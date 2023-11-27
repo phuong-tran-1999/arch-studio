@@ -1,0 +1,14 @@
+footer {
+    --_m-x: 4rem;
+    --_margin-y: 3rem;
+    --_p-x: 4rem;
+    --_p-y: 3rem;
+    --_bg: var(--clr-very-light-gray);
+
+    display: flex;
+    flex-direction: column;
+
+    margin: var(--_p-x) var(--_p-y);
+
+    background-color: var(--_bg);
+}

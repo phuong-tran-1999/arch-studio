@@ -6,8 +6,7 @@
         "start": "nx serve",
         "build": "nx build",
         "test": "nx test",
-        "graph": "nx graph",
-        "build-ghpage": "nx run arch-studio:build --outputPath=docs --baseHref=arch-studio"
+        "graph": "nx graph"
     },
     "private": true,
     "dependencies": {
