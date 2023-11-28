@@ -1,14 +1,31 @@
 footer {
     --_m-x: 4rem;
     --_margin-y: 3rem;
+
     --_p-x: 4rem;
     --_p-y: 3rem;
+    --_p-top: 0;
+
+    --_gap: 2rem;
+
     --_bg: var(--clr-very-light-gray);
+    --_clr: var(--clr-medium-gray);
 
     display: flex;
     flex-direction: column;
+    gap: var(--_gap);
 
-    margin: var(--_p-x) var(--_p-y);
+    padding: var(--_p-top) var(--_p-x) var(--_p-y);
 
     background-color: var(--_bg);
+
+    text-align: center;
+    color: var(--_clr);
+
+    img {
+        --_img-width: 120px;
+
+        max-width: var(--_img-width);
+        margin: calc(var(--_img-width) / -2) auto 0;
+    }
 }
