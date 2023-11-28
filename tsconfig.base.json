@@ -25,7 +25,10 @@
                 "modules/shared/ui/single-breadcrumb/src/index.ts"
             ],
             "@modules/home": ["modules/home/src/index.ts"],
-            "@modules/portfolio": ["modules/portfolio/src/index.ts"]
+            "@modules/portfolio": ["modules/portfolio/src/index.ts"],
+            "@modules/shared/directives/swiper": [
+                "modules/shared/directives/swiper/src/index.ts"
+            ]
         }
     },
     "exclude": ["node_modules", "tmp"]

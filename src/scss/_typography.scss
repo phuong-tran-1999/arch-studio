@@ -22,9 +22,14 @@ body {
     }
 
     &--l {
-        --_fs: 6rem; // 96px;
+        --_fs: 3rem; // 48px;
         --_lh: 0.8333;
-        --_ls: -2px;
+        --_ls: -1.2px;
+
+        @media (min-width: 768px) {
+            --_fs: 6rem; // 96px
+            --_ls: -2px;
+        }
     }
 
     &--m {
@@ -33,12 +38,6 @@ body {
         --_ls: -2px;
     }
 }
-
-// .body {
-//     font-weight: var(--fw-normal);
-//     font-size: 1.125rem; // 18px
-//     line-height: 1.333;
-// }
 
 .sub-heading {
     font-weight: var(--fw-bold);

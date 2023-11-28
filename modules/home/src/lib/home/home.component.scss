@@ -1,3 +1,25 @@
 :host {
     flex: 1 auto;
 }
+
+.hero {
+    background-image: url(/assets/images/project-paramour.webp);
+    background-position: top center;
+    background-size: cover;
+
+    --_p-x: 2rem;
+    --_p-y: 7rem;
+    --_mb-heading: 0.75rem;
+    --_mb-description: 5rem;
+
+    color: var(--clr-white);
+    padding: var(--_p-y) var(--_p-x);
+
+    .heading {
+        margin-bottom: var(--_mb-heading);
+    }
+
+    .description {
+        margin-bottom: var(--_mb-description);
+    }
+}

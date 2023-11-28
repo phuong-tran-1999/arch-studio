@@ -1,7 +1,12 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+    AfterViewInit,
+    ChangeDetectionStrategy,
+    Component,
+} from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from '@module/shared/layout/footer';
 import { HeaderComponent } from '@module/shared/layout/header';
+import { register } from 'swiper/element/bundle';
 
 @Component({
     standalone: true,
@@ -11,4 +16,8 @@ import { HeaderComponent } from '@module/shared/layout/header';
     styleUrl: './app.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {}
+export class AppComponent implements AfterViewInit {
+    ngAfterViewInit(): void {
+        register();
+    }
+}

@@ -10,12 +10,14 @@ footer {
 
     --_bg: var(--clr-very-light-gray);
     --_clr: var(--clr-medium-gray);
+    --_img-width: 120px;
 
     display: flex;
     flex-direction: column;
     gap: var(--_gap);
 
     padding: var(--_p-top) var(--_p-x) var(--_p-y);
+    margin-top: calc(var(--_img-width) / 2);
 
     background-color: var(--_bg);
 
@@ -23,9 +25,14 @@ footer {
     color: var(--_clr);
 
     img {
-        --_img-width: 120px;
+        // --_img-width: 120px;
 
         max-width: var(--_img-width);
         margin: calc(var(--_img-width) / -2) auto 0;
+    }
+
+    button {
+        margin-left: auto;
+        margin-right: auto;
     }
 }

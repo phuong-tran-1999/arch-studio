@@ -1,0 +1,27 @@
+{
+    "name": "swiper",
+    "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "modules/shared/directives/swiper/src",
+    "prefix": "fm",
+    "tags": ["type:directive"],
+    "projectType": "library",
+    "targets": {
+        "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+            "options": {
+                "jestConfig": "modules/shared/directives/swiper/jest.config.ts"
+            }
+        },
+        "lint": {
+            "executor": "@nx/eslint:lint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": [
+                    "modules/shared/directives/swiper/**/*.ts",
+                    "modules/shared/directives/swiper/**/*.html"
+                ]
+            }
+        }
+    }
+}
