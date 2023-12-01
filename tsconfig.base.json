@@ -21,9 +21,6 @@
             "@module/shared/layout/header": [
                 "modules/shared/layout/header/src/index.ts"
             ],
-            "@module/shared/ui/single-breadcrumb": [
-                "modules/shared/ui/single-breadcrumb/src/index.ts"
-            ],
             "@modules/home": ["modules/home/src/index.ts"],
             "@modules/portfolio": ["modules/portfolio/src/index.ts"],
             "@modules/shared/data-access": [
@@ -31,6 +28,10 @@
             ],
             "@modules/shared/directives/swiper": [
                 "modules/shared/directives/swiper/src/index.ts"
+            ],
+            "@modules/shared/ui/card": ["modules/shared/ui/card/src/index.ts"],
+            "@modules/shared/ui/single-breadcrumb": [
+                "modules/shared/ui/single-breadcrumb/src/index.ts"
             ]
         }
     },

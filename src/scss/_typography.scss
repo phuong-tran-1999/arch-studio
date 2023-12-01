@@ -3,6 +3,11 @@ body {
     font-weight: var(--fw-normal);
     font-size: 1.125rem; // 18px
     line-height: 1.333;
+    color: var(--clr-dark-gray);
+}
+
+p:not(:last-of-type) {
+    margin-bottom: 1.5rem;
 }
 
 .heading {
@@ -23,8 +28,11 @@ body {
 
     &--l {
         --_fs: 3rem; // 48px;
-        --_lh: 0.8333;
+        --_lh: 1;
         --_ls: -1.2px;
+
+        color: var(--clr-dark-blue);
+        margin-bottom: 1.5rem;
 
         @media (min-width: 768px) {
             --_fs: 6rem; // 96px
@@ -36,6 +44,22 @@ body {
         --_fs: 4.5rem; // 72px
         --_lh: 0.875;
         --_ls: -2px;
+    }
+
+    &--decorative {
+        --_decorative-gap: 4rem;
+        --_decorative-height: 1px;
+        margin-top: var(--_decorative-gap);
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: calc(var(--_decorative-gap) * -1 + var(--_decorative-height));
+            left: 0;
+            height: var(--_decorative-height);
+            width: var(--_decorative-gap);
+            background-color: currentColor;
+        }
     }
 }
 

@@ -1,0 +1,19 @@
+@if (cardData.link) {
+<a
+    [routerLink]="cardData.link"
+    class="card"
+    [style.--_card-img]="cardData.imageLink"
+>
+    <ng-container [ngTemplateOutlet]="cardContent"></ng-container>
+</a>
+
+} @else {
+<div class="card" [style.--_card-img]="cardData.imageLink">
+    <ng-container [ngTemplateOutlet]="cardContent"></ng-container>
+</div>
+}
+
+<ng-template #cardContent>
+    <h3>{{ cardData.title }}</h3>
+    <span>{{ cardData.description }}</span>
+</ng-template>

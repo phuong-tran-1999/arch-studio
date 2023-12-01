@@ -1,4 +1,3 @@
-import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {
@@ -7,14 +6,22 @@ import {
     Component,
     inject,
 } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { HeroSlide } from '@modules/shared/data-access';
 import { SwiperDirective } from '@modules/shared/directives/swiper';
+import { CardComponent } from '@modules/shared/ui/card';
 import { SwiperOptions } from 'swiper/types';
 
 @Component({
     selector: 'fm-home',
     standalone: true,
-    imports: [CommonModule, SwiperDirective, HttpClientModule, RouterModule],
+    imports: [
+        CommonModule,
+        HttpClientModule,
+        RouterModule,
+        SwiperDirective,
+        CardComponent,
+    ],
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -24,23 +31,16 @@ export class HomeComponent {
     private _httpService = inject(HttpClient);
 
     public config: SwiperOptions = {
-        // modules: [Navigation, Pagination, A11y, Mousewheel],
-        // modules: [Navigation],
-        // autoHeight: true,
-        // spaceBetween: 20,
         navigation: false,
         pagination: false,
         slidesPerView: 1,
         centeredSlides: true,
-        // breakpoints: {
-        //     400: {
-        //         slidesPerView: 'auto',
-        //         centeredSlides: false,
-        //     },
-        // },
+        loop: true,
     };
 
     public slides = this._httpService.get<HeroSlide[]>(
         '/assets/data/hero-slide.json'
     );
+
+    public heroImage2 = 'url(/assets/images/home-2.webp)';
 }
