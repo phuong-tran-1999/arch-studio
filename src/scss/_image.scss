@@ -1,0 +1,20 @@
+.low-opacity-bg-image {
+    --_bg-img-opacity: 0.35;
+    --_bg-img: url(/assets/images/project-paramour.webp);
+
+    position: relative;
+    isolation: isolate;
+    background-color: black;
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        opacity: var(--_bg-img-opacity);
+
+        background-size: cover;
+        background-position: top center;
+        background-image: var(--_bg-img);
+    }
+}

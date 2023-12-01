@@ -26,6 +26,9 @@
             ],
             "@modules/home": ["modules/home/src/index.ts"],
             "@modules/portfolio": ["modules/portfolio/src/index.ts"],
+            "@modules/shared/data-access": [
+                "modules/shared/data-access/src/index.ts"
+            ],
             "@modules/shared/directives/swiper": [
                 "modules/shared/directives/swiper/src/index.ts"
             ]

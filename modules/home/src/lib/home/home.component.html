@@ -1,27 +1,20 @@
-<!-- <swiper-container
-    fmSwiper
-    [swiperConfig]="config"
-    init="false"
-    [pagination]="true"
->
-    <swiper-slide>Slide 1</swiper-slide>
-    <swiper-slide>Slide 2</swiper-slide>
-    <swiper-slide>Slide 3</swiper-slide>
-    <swiper-slide>Slide 4</swiper-slide>
-    <swiper-slide>Slide 5</swiper-slide>
-    <swiper-slide>Slide 6</swiper-slide>
-    <swiper-slide>Slide 7</swiper-slide>
-    <swiper-slide>Slide 8</swiper-slide>
-    <swiper-slide>Slide 9</swiper-slide>
-</swiper-container> -->
+@if (slides | async; as slides) {
+<swiper-container fmSwiper init="false" [swiperConfig]="config">
+    @for (slide of slides; track slide.id) {
+    <swiper-slide>
+        <div
+            [style.--_bg-img]="slide.imageURL"
+            class="hero low-opacity-bg-image"
+        >
+            <p class="heading heading--l">{{ slide.heading }}</p>
 
-<div class="hero">
-    <p class="heading heading--l">Project Paramour</p>
+            <p class="description">{{ slide.description }}</p>
 
-    <p class="description">
-        Project made for an art museum near Southwest London. Project Paramour
-        is a statement of bold, modern architecture.
-    </p>
-
-    <button class="btn btn--action">See Our Portfolio</button>
-</div>
+            <a [routerLink]="slide.link" class="btn btn--action">
+                See Our Portfolio
+            </a>
+        </div>
+    </swiper-slide>
+    }
+</swiper-container>
+}

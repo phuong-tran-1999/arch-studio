@@ -3,14 +3,12 @@
 }
 
 .hero {
-    background-image: url(/assets/images/project-paramour.webp);
-    background-position: top center;
-    background-size: cover;
-
     --_p-x: 2rem;
     --_p-y: 7rem;
     --_mb-heading: 0.75rem;
     --_mb-description: 5rem;
+
+    --_height: calc(100svh - 104px); /* hard code for now */
 
     color: var(--clr-white);
     padding: var(--_p-y) var(--_p-x);
@@ -19,7 +17,12 @@
         margin-bottom: var(--_mb-heading);
     }
 
-    .description {
-        margin-bottom: var(--_mb-description);
+    display: flex;
+    flex-direction: column;
+
+    height: var(--_height);
+
+    a {
+        margin-top: auto;
     }
 }

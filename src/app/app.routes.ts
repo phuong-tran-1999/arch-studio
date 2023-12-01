@@ -7,4 +7,8 @@ export const appRoutes: Route[] = [
         loadComponent: () =>
             import('@modules/home').then((c) => c.HomeComponent),
     },
+    {
+        path: '**',
+        redirectTo: '',
+    },
 ];
