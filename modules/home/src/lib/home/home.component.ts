@@ -1,5 +1,5 @@
+import { SkeletonComponent } from '@modules/shared/ui/skeleton';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
 import {
     CUSTOM_ELEMENTS_SCHEMA,
     ChangeDetectionStrategy,
@@ -17,10 +17,10 @@ import { HomeService } from './home.service';
     standalone: true,
     imports: [
         CommonModule,
-        HttpClientModule,
         RouterModule,
         SwiperDirective,
         CardComponent,
+        SkeletonComponent,
     ],
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss',
@@ -29,7 +29,7 @@ import { HomeService } from './home.service';
     providers: [HomeService],
 })
 export class HomeComponent {
-    private _homeService = inject(HomeService);
+    private _service = inject(HomeService);
 
     public config: SwiperOptions = {
         navigation: false,
@@ -40,6 +40,6 @@ export class HomeComponent {
     };
     public heroImage2 = 'url(/assets/images/home-2.webp)';
 
-    public slides$ = this._homeService.getHeroSlide();
-    public previewFeatured$ = this._homeService.getPreviewFeatured();
+    public slides$ = this._service.getHeroSlide();
+    public previewFeatured$ = this._service.getPreviewFeatured();
 }

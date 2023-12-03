@@ -1,1 +1,11 @@
-<p>portfolio works!</p>
+@if (projects$ | async; as projects) {
+    <div class="portfolio__layout">
+        @for (project of projects; track project.id) {
+            @defer (on viewport) {
+                <fm-card [cardData]="project"></fm-card>
+            } @placeholder (minimum 1s) {
+                <fm-skeleton height="248px"></fm-skeleton>
+            }
+        }
+    </div>
+}

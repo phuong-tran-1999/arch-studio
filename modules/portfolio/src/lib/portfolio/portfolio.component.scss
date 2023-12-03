@@ -1,3 +1,17 @@
 :host {
     flex: 1 auto;
 }
+
+.portfolio {
+    &__layout {
+        --_p-x: var(--spacing-master-mob);
+        --_p-y: 4.5rem;
+        --_display: flex;
+        --_gap: 1.5rem;
+
+        padding: var(--_p-y) var(--_p-x);
+        display: var(--_display);
+        flex-direction: column;
+        gap: var(--_gap);
+    }
+}

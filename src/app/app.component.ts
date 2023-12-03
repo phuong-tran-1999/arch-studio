@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import {
     AfterViewInit,
     ChangeDetectionStrategy,
@@ -10,7 +11,7 @@ import { register } from 'swiper/element/bundle';
 
 @Component({
     standalone: true,
-    imports: [RouterModule, FooterComponent, HeaderComponent],
+    imports: [RouterModule, FooterComponent, HeaderComponent, HttpClientModule],
     selector: 'arch-studio-root',
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
