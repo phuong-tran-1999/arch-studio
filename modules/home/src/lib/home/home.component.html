@@ -1,22 +1,24 @@
-@if (slides | async; as slides) {
-<swiper-container fmSwiper init="false" [swiperConfig]="config">
-    @for (slide of slides; track slide.id) {
-    <swiper-slide>
-        <section
-            [style.--_bg-img]="slide.imageURL"
-            class="home__hero hero__menu-subsequence low-opacity-bg-image"
-        >
-            <h3 class="heading heading--l">{{ slide.heading }}</h3>
+@if (slides$ | async; as slides) {
+    <swiper-container fmSwiper init="false" [swiperConfig]="config">
+        @for (slide of slides; track slide.id) {
+            <swiper-slide>
+                <section
+                    [style.--_bg-img]="slide.imageURL"
+                    class="home__hero hero__menu-subsequence low-opacity-bg-image"
+                >
+                    <h3 class="heading heading--l">{{ slide.heading }}</h3>
 
-            <p class="description line-clamp-4">{{ slide.description }}</p>
+                    <p class="description line-clamp-4">
+                        {{ slide.description }}
+                    </p>
 
-            <a [routerLink]="slide.link" class="btn btn--action">
-                See Our Portfolio
-            </a>
-        </section>
-    </swiper-slide>
-    }
-</swiper-container>
+                    <a [routerLink]="slide.link" class="btn btn--action">
+                        See Our Portfolio
+                    </a>
+                </section>
+            </swiper-slide>
+        }
+    </swiper-container>
 }
 
 <section class="home__welcome">
@@ -48,11 +50,23 @@
 >
     <h2 class="heading heading--l">Small team, big ideas</h2>
 
-    <a [routerLink]="'/'" class="btn btn--action">About Us</a>
+    <a routerLink="/about-us" class="btn btn--action">About Us</a>
 </section>
 
 <section class="home__featured">
     <h2 class="heading heading--l">Featured</h2>
 
-    <fm-card [cardData]="{ id: 1, title: 'abc', description: 'xes' }"></fm-card>
+    @if (previewFeatured$ | async; as featured) {
+        <div class="home__featured-layout">
+            @for (item of featured; track item.id) {
+                @defer (on viewport) {
+                    <fm-card [cardData]="item"></fm-card>
+                } @placeholder (minimum 500ms) {
+                    <p>Placeholder here!</p>
+                }
+            }
+        </div>
+    }
+
+    <a routerLink="/portfolio" class="btn btn--action"> See All </a>
 </section>

@@ -1,0 +1,89 @@
+[
+    {
+        "id": 1,
+        "link": "",
+        "title": "Seraph Station",
+        "description": "September 2019",
+        "imageURL": "/assets/images/seraph-station.webp"
+    },
+    {
+        "id": 2,
+        "link": "",
+        "title": "Eebox Building",
+        "description": "August 2017",
+        "imageURL": "/assets/images/eebox-building.webp"
+    },
+    {
+        "id": 3,
+        "link": "",
+        "title": "Federal II Tower",
+        "description": "March 2017",
+        "imageURL": "/assets/images/federal-ii-tower.webp"
+    },
+    {
+        "id": 4,
+        "link": "/",
+        "title": "Project Del Sol",
+        "description": "January 2016",
+        "imageURL": "/assets/images/project-del-sol.webp",
+        "forPreview": true
+    },
+    {
+        "id": 5,
+        "link": "/",
+        "title": "Le Prototype",
+        "description": "October 2015",
+        "imageURL": "/assets/images/le-prototype.webp",
+        "forPreview": true
+    },
+    {
+        "id": 6,
+        "link": "/",
+        "title": "228B Tower",
+        "description": "April 2015",
+        "imageURL": "/assets/images/228b-tower.webp",
+        "forPreview": true
+    },
+    {
+        "id": 7,
+        "link": "",
+        "title": "Grand Edelweiss Hotel",
+        "description": "December 2013",
+        "imageURL": "/assets/images/grand-edelweiss-hotel.webp"
+    },
+    {
+        "id": 8,
+        "link": "",
+        "title": "Netcry Tower",
+        "description": "August 2012",
+        "imageURL": "/assets/images/netcry-tower.webp"
+    },
+    {
+        "id": 9,
+        "link": "",
+        "title": "Hypers",
+        "description": "January 2012",
+        "imageURL": "/assets/images/hypers.webp"
+    },
+    {
+        "id": 10,
+        "link": "",
+        "title": "SXIV Tower",
+        "description": "March 2011",
+        "imageURL": "/assets/images/sxiv-tower.webp"
+    },
+    {
+        "id": 11,
+        "link": "",
+        "title": "Trinity Bank Tower",
+        "description": "September 2010",
+        "imageURL": "/assets/images/trinity-bank-tower.webp"
+    },
+    {
+        "id": 12,
+        "link": "",
+        "title": "Project Paramour",
+        "description": "September 2010",
+        "imageURL": "/assets/images/project-paramour.webp"
+    }
+]

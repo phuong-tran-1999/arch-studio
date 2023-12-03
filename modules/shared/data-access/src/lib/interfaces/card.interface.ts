@@ -3,5 +3,6 @@ export interface Card {
     link?: string;
     title: string;
     description: string;
-    imageLink?: string;
+    imageURL?: string;
+    forPreview?: boolean;
 }

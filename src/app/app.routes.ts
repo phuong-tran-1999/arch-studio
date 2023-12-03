@@ -8,6 +8,11 @@ export const appRoutes: Route[] = [
             import('@modules/home').then((c) => c.HomeComponent),
     },
     {
+        path: 'portfolio',
+        loadComponent: () =>
+            import('@modules/portfolio').then((c) => c.PortfolioComponent),
+    },
+    {
         path: '**',
         redirectTo: '',
     },

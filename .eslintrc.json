@@ -32,5 +32,6 @@
       "rules": {}
     }
   ],
+  "parser": "angular",
   "extends": ["./.eslintrc.base.json"]
 }

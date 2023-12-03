@@ -1,0 +1,57 @@
+.card {
+    --_img-height: 240px;
+    --_clr: var(--clr-white);
+    --_p-x: 1.5rem;
+    --_p-t: 10rem;
+    --_p-b: 1.5rem;
+
+    position: relative;
+    padding: var(--_p-t) var(--_p-x) var(--_p-b);
+    color: var(--_clr);
+
+    img {
+        object-fit: cover;
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+
+    &__gradient {
+        --gradient-from: #111827;
+        --gradient-to: rgb(17 24 39 / 0);
+        --gradient-stops: var(--gradient-from), rgb(17 24 39 / 0.4),
+            var(--gradient-to);
+
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background-image: linear-gradient(to top, var(--gradient-stops));
+    }
+
+    // &__shadow {
+    //     --ring-offset-width: 0px;
+    //     --ring-offset-color: #fff;
+    //     --shadow: 0 0 #0000;
+
+    //     --ring-color: rgb(17 24 39 / 0.1);
+    //     --ring-inset: inset;
+    //     --ring-offset-shadow: var(--ring-inset) 0 0 0 var(--ring-offset-width)
+    //         var(--ring-offset-color);
+    //     --ring-shadow: var(--ring-inset) 0 0 0
+    //         calc(1px + var(--ring-offset-width)) var(--ring-color);
+
+    //     box-shadow: var(--ring-offset-shadow), var(--ring-shadow),
+    //         var(--shadow, 0 0 #0000);
+    // }
+
+    &__description {
+        opacity: 0.75;
+    }
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+    }
+}

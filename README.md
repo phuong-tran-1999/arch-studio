@@ -14,6 +14,7 @@
 -   (CSS) Uppercase the global var, remove the underscore from local var
 -   (CSS) Use 10px as a base font size
 -   (CSS) Naming the global var by their usage, not their value. E.g bg-color, not clr-white.
+-   (CSS) Use class instead of element when defining rules for an element inside a class
 -   (Typescript) Use type instead of interface
 
 ## Start the app

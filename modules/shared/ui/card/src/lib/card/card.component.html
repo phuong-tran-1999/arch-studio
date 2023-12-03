@@ -1,19 +1,16 @@
-@if (cardData.link) {
-<a
-    [routerLink]="cardData.link"
-    class="card"
-    [style.--_card-img]="cardData.imageLink"
->
-    <ng-container [ngTemplateOutlet]="cardContent"></ng-container>
-</a>
+<article class="card">
+    <img [src]="cardData.imageURL" [alt]="cardData.title" />
 
-} @else {
-<div class="card" [style.--_card-img]="cardData.imageLink">
-    <ng-container [ngTemplateOutlet]="cardContent"></ng-container>
-</div>
-}
+    <div class="card__gradient"></div>
 
-<ng-template #cardContent>
-    <h3>{{ cardData.title }}</h3>
-    <span>{{ cardData.description }}</span>
-</ng-template>
+    <!-- <div class="card__shadow"></div> -->
+
+    <h3 class="heading">
+        <a [routerLink]="cardData.link">
+            <span class="card__overlay"></span>
+            {{ cardData.title }}
+        </a>
+    </h3>
+
+    <span class="card__description">{{ cardData.description }}</span>
+</article>
