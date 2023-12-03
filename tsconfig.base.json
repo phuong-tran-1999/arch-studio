@@ -21,6 +21,8 @@
             "@module/shared/layout/header": [
                 "modules/shared/layout/header/src/index.ts"
             ],
+            "@modules/about-us": ["modules/about-us/src/index.ts"],
+            "@modules/contact": ["modules/contact/src/index.ts"],
             "@modules/home": ["modules/home/src/index.ts"],
             "@modules/portfolio": ["modules/portfolio/src/index.ts"],
             "@modules/shared/data-access": [

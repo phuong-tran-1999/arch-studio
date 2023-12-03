@@ -13,6 +13,16 @@ export const appRoutes: Route[] = [
             import('@modules/portfolio').then((c) => c.PortfolioComponent),
     },
     {
+        path: 'about-us',
+        loadComponent: () =>
+            import('@modules/about-us').then((c) => c.AboutUsComponent),
+    },
+    {
+        path: 'contact',
+        loadComponent: () =>
+            import('@modules/contact').then((c) => c.ContactComponent),
+    },
+    {
         path: '**',
         redirectTo: '',
     },
