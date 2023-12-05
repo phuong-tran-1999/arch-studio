@@ -1,3 +1,56 @@
 :host {
     flex: 1 auto;
 }
+
+.about-us__banner {
+    &-content {
+        --_p-l: var(--spacing-master-mob);
+        --_p-r: 0;
+        --_p-t: 4rem;
+        --_p-b: 4.5rem;
+
+        --_m-t: -2.5rem;
+        --_m-r: 2rem;
+
+        padding: var(--_p-t) var(--_p-r) var(--_p-b) var(--_p-l);
+        margin-right: var(--_m-r);
+        margin-top: var(--_m-t);
+        background-color: white;
+        isolation: isolate;
+    }
+}
+
+.about-us__heritage {
+    --_p-x: var(--spacing-master-mob);
+    --_p-y: 0;
+    --_m-b: 4.5rem;
+
+    padding: var(--_p-y) var(--_p-x);
+    margin-bottom: var(--_m-b);
+}
+
+.about-us__leader {
+    --_p-x: var(--spacing-master-mob);
+    --_p-y: 0;
+    --_m-b: 4.5rem;
+
+    --_display: flex;
+    --_gap: 3.5rem;
+
+    padding: var(--_p-y) var(--_p-x);
+    margin-bottom: var(--_m-b);
+
+    display: var(--_display);
+    flex-direction: column;
+    gap: var(--_gap);
+
+    color: var(--clr-dark-blue);
+
+    &-img {
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        object-position: top;
+        margin-bottom: 1rem;
+    }
+}

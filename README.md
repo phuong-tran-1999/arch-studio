@@ -16,6 +16,7 @@
 -   (CSS) Naming the global var by their usage, not their value. E.g bg-color, not clr-white.
 -   (CSS) Use class instead of element when defining rules for an element inside a class
 -   (Typescript) Use type instead of interface
+-   (Code) code theo component, responsive component
 
 ## Start the app
 

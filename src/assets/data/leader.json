@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Jake Richards",
+        "imageURL": "assets/images/jake-richards.webp",
+        "designation": "Chief Architect"
+    },
+    {
+        "id": 2,
+        "name": "Thompson Smith",
+        "imageURL": "assets/images/thompson-smith.webp",
+        "designation": "Head of Finance"
+    },
+    {
+        "id": 3,
+        "name": "Jackson Rourke",
+        "imageURL": "assets/images/jackson-rourke.webp",
+        "designation": "Lead Designer"
+    },
+    {
+        "id": 4,
+        "name": "Maria Simpson",
+        "imageURL": "assets/images/maria-simpson.webp",
+        "designation": "Senior Architect"
+    }
+]

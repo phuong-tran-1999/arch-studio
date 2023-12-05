@@ -1,1 +1,47 @@
-<p>about-us works!</p>
+<section class="about-us__banner">
+    <img src="assets/images/about-1.webp" alt="" srcset="" loading="lazy" />
+
+    <div class="about-us__banner-content">
+        <h2 class="heading heading--l">Your team of professionals</h2>
+
+        <p>
+            Our small team of world-class professionals will work with you every
+            step of the way. Strong relationships are at the core of everything
+            we do. This extends to the relationship our projects have with their
+            surroundings.
+        </p>
+    </div>
+</section>
+
+<section class="about-us__heritage">
+    <h2 class="heading heading--l heading--decorative">Our Heritage</h2>
+
+    <p>
+        Founded in 2007, we started as a trio of architects. Our complimentary
+        skills and relentless attention to detail turned Arch into one of the
+        most sought after boutique firms in the country.
+    </p>
+
+    <p>
+        Speciliazing in Urban Design allowed us to focus on creating exceptional
+        structures that live in harmony with their surroundings. We consider
+        every detail from every surrounding element to inform our designs.
+    </p>
+
+    <p>
+        Our small team of world-class professionals provides input on every
+        project.
+    </p>
+</section>
+
+<section class="about-us__leader">
+    <h2 class="heading heading--l">The Leaders</h2>
+
+    @for (leader of leaders$ | async; track leader.id) {
+        <div>
+            <img class="about-us__leader-img" [src]="leader.imageURL" alt="" />
+            <h3 class="heading">{{ leader.name }}</h3>
+            <div>{{ leader.designation }}</div>
+        </div>
+    }
+</section>
