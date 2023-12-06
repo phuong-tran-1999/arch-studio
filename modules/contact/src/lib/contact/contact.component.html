@@ -1,1 +1,33 @@
-<p>contact works!</p>
+<section class="banner">
+    <img src="assets/images/contact-1.webp" alt="" srcset="" />
+
+    <div class="banner-content">
+        <h2 class="heading heading--l">Tell us about your project</h2>
+
+        <p>
+            We'd love to hear more about your project. Please, leave a message
+            below or give us a call. We have two offices, one in Texas and one
+            in Tennessee. If you find yourself nearby, come say hello!
+        </p>
+    </div>
+</section>
+
+<section class="contact__detail">
+    <h2 class="heading heading--l heading--decorative">Contact Details</h2>
+
+    @for (contact of contacts$ | async; track contact.name) {
+        <div class="contact__info">
+            <h4 class="sub-heading">{{ contact.name }}</h4>
+
+            <address>
+                <div>Mail: {{ contact.mail }}</div>
+                <div>Address: {{ contact.address }}</div>
+                <div>Phone: {{ contact.phone }}</div>
+            </address>
+
+            <button class="btn btn--action btn--reverse">View On Map</button>
+        </div>
+    } @empty {
+        <p>Nothing to see here</p>
+    }
+</section>

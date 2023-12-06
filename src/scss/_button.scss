@@ -24,15 +24,35 @@
     text-transform: capitalize;
 
     &:hover {
-        background-color: var(--_bg-hover);
+        --_bg: var(--_bg-hover);
     }
 
     &:active {
-        background-color: var(--_bg-active);
+        --_bg: var(--_bg-active);
+    }
+
+    &--reverse {
+        --_clr: var(--clr-dark-blue);
+        --_bg: var(--clr-white);
+        --_p-x: 0;
+
+        &:hover,
+        &:active {
+            --_bg: unset;
+        }
     }
 
     &--action::after {
-        content: url('/assets/icons/arrow-right-icon.svg');
+        content: '';
+        background-color: var(--_clr);
+
+        -webkit-mask: url('/assets/icons/arrow-right-icon.svg') no-repeat 50%
+            50%;
+        mask: url('/assets/icons/arrow-right-icon.svg') no-repeat 50% 50%;
+        -webkit-mask-size: cover;
+        mask-size: cover;
+
         height: 20px;
+        width: 24px;
     }
 }

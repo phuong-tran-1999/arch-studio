@@ -1,0 +1,17 @@
+.banner {
+    &-content {
+        --_p-l: var(--spacing-master-mob);
+        --_p-r: 0;
+        --_p-t: 4rem;
+        --_p-b: 4.5rem;
+
+        --_m-t: -2.5rem;
+        --_m-r: 2rem;
+
+        padding: var(--_p-t) var(--_p-r) var(--_p-b) var(--_p-l);
+        margin-right: var(--_m-r);
+        margin-top: var(--_m-t);
+        background-color: white;
+        isolation: isolate;
+    }
+}

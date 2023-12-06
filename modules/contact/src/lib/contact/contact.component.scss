@@ -1,3 +1,27 @@
 :host {
     flex: 1 auto;
 }
+
+.contact__detail {
+    --_p-x: var(--spacing-master-mob);
+    --_p-t: 2.5rem;
+    --_p-b: 2.5rem;
+
+    --_flex-direction: column;
+    --_gap: 2.5rem;
+
+    padding: var(--_p-t) var(--_p-x) var(--_p-b);
+
+    display: flex;
+    flex-direction: var(--_flex-direction);
+    gap: var(--_gap);
+}
+
+.contact__info {
+    --_gap: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--_gap);
+}
