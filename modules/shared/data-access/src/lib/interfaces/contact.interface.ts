@@ -3,5 +3,6 @@ export interface Contact {
     mail: string;
     address: string;
     phone: string;
-    map: unknown;
+    lat: number;
+    lng: number;
 }

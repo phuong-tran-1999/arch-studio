@@ -19,9 +19,29 @@
 
 .contact__info {
     --_gap: 1rem;
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: var(--_gap);
+}
+
+.contact__map {
+    --_height: 30rem;
+    height: var(--_height);
+}
+
+.contact__form {
+    --_p-x: var(--spacing-master-mob);
+    --_p-y: 3.5rem;
+    --_gap: 1rem;
+
+    padding: var(--_p-y) var(--_p-x);
+
+    input {
+        margin-bottom: var(--_gap);
+    }
+
+    button[type='submit'] {
+        margin-left: auto;
+    }
 }

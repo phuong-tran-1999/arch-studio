@@ -1,0 +1,31 @@
+input,
+textarea {
+    --_border-clr: var(--clr-dark-blue);
+    --_border-width: 1px;
+    --_p-y: 1rem;
+    --_p-x: 1rem;
+    --_m-b: 1rem;
+
+    width: 100%;
+    border-bottom-width: var(--_border-width);
+    border-bottom-color: var(--_border-clr);
+
+    padding: var(--_p-y) var(--_p-x);
+}
+
+::placeholder,
+::-ms-input-placeholder {
+    // color: var(--_border-clr);
+    color: yellow;
+}
+
+.ng-touched.ng-invalid {
+    --_border-clr: var(--clr-red);
+    --_border-width: 2px;
+
+    opacity: 0.85;
+}
+
+.ng-touched.ng-invalid::placeholder {
+    color: var(--_border-clr);
+}

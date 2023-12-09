@@ -42,17 +42,23 @@
         }
     }
 
-    &--action::after {
-        content: '';
-        background-color: var(--_clr);
+    &--action {
+        &::after {
+            content: '';
+            background-color: var(--_clr);
 
-        -webkit-mask: url('/assets/icons/arrow-right-icon.svg') no-repeat 50%
-            50%;
-        mask: url('/assets/icons/arrow-right-icon.svg') no-repeat 50% 50%;
-        -webkit-mask-size: cover;
-        mask-size: cover;
+            -webkit-mask: url('/assets/icons/arrow-right-icon.svg') no-repeat
+                50% 50%;
+            mask: url('/assets/icons/arrow-right-icon.svg') no-repeat 50% 50%;
+            -webkit-mask-size: cover;
+            mask-size: cover;
 
-        height: 20px;
-        width: 24px;
+            height: 20px;
+            width: 24px;
+        }
+
+        &-only {
+            --_p-x: 1.5rem;
+        }
     }
 }

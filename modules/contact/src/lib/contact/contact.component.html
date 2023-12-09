@@ -25,9 +25,45 @@
                 <div>Phone: {{ contact.phone }}</div>
             </address>
 
-            <button class="btn btn--action btn--reverse">View On Map</button>
+            <button
+                (click)="viewOnMap(contact)"
+                class="btn btn--action btn--reverse"
+            >
+                View On Map
+            </button>
         </div>
     } @empty {
         <p>Nothing to see here</p>
     }
+</section>
+
+<section id="map" class="contact__map"></section>
+
+<section class="contact__form">
+    <h2 class="heading heading--l">Connect with us</h2>
+
+    <form [formGroup]="form" (submit)="submitForm()">
+        <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            formControlName="name"
+        />
+
+        <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            formControlName="email"
+        />
+
+        <textarea
+            name="message"
+            rows="5"
+            placeholder="Message"
+            formControlName="message"
+        ></textarea>
+
+        <button type="submit" class="btn btn--action btn--action-only"></button>
+    </form>
 </section>

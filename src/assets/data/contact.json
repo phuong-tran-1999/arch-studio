@@ -2,15 +2,17 @@
     {
         "name": "Main Office",
         "mail": "archone@mail.com",
-        "address": "1892 Chenoweth Drive TN Phone",
-        "phone": "123-456-3451",
-        "map": ""
+        "address": "Viettel Complex Tower - 285 CMT8, HCM City",
+        "phone": "123-456-7890",
+        "lat": 10.778187298772059,
+        "lng": 106.67984216659295
     },
     {
         "name": "Office II",
         "mail": "archtwo@mail.com",
-        "address": "3399 Wines Lane TX",
+        "address": "Landmark 81, 720A Dien Bien Phu, HCM City",
         "phone": "832-123-4321",
-        "map": ""
+        "lat": 10.795066891054871,
+        "lng": 106.72219701602528
     }
 ]
