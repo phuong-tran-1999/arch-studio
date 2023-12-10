@@ -33,15 +33,16 @@
 .contact__form {
     --_p-x: var(--spacing-master-mob);
     --_p-y: 3.5rem;
-    --_gap: 1rem;
 
     padding: var(--_p-y) var(--_p-x);
-
-    input {
-        margin-bottom: var(--_gap);
-    }
 
     button[type='submit'] {
         margin-left: auto;
     }
+}
+
+.form-field:not(:last-of-type) {
+    --_gap: 1rem;
+
+    margin-bottom: var(--_gap);
 }

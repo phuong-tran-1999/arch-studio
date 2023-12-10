@@ -1,7 +1,7 @@
 input,
 textarea {
     --_border-clr: var(--clr-dark-blue);
-    --_border-width: 1px;
+    --_border-width: 2px;
     --_p-y: 1rem;
     --_p-x: 1rem;
     --_m-b: 1rem;
@@ -13,19 +13,24 @@ textarea {
     padding: var(--_p-y) var(--_p-x);
 }
 
-::placeholder,
-::-ms-input-placeholder {
-    // color: var(--_border-clr);
-    color: yellow;
-}
-
 .ng-touched.ng-invalid {
-    --_border-clr: var(--clr-red);
-    --_border-width: 2px;
+    --_border-clr: var(--clr-error);
 
     opacity: 0.85;
+
+    &::placeholder {
+        color: var(--clr-error);
+    }
 }
 
-.ng-touched.ng-invalid::placeholder {
-    color: var(--_border-clr);
+.form-field {
+    position: relative;
+}
+
+.form-error {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+
+    color: var(--clr-error);
 }

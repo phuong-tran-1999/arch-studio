@@ -6,8 +6,16 @@ import {
     OnInit,
     inject,
 } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Contact } from '@modules/shared/data-access';
+import {
+    AbstractControl,
+    FormBuilder,
+    ReactiveFormsModule,
+    Validators,
+} from '@angular/forms';
+import {
+    CONTACT_FORM_ERROR_MESSAGES,
+    Contact,
+} from '@modules/shared/data-access';
 import { Map, map, marker, tileLayer } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { ContactService } from './contact.service';
@@ -29,6 +37,13 @@ export class ContactComponent implements OnInit, AfterViewInit {
     public map!: Map;
     public form = this.setupForm();
     public contacts$ = this._service.getContacts();
+
+    public errorList = CONTACT_FORM_ERROR_MESSAGES;
+
+    getControl(name: string): AbstractControl | null {
+        console.log('Get');
+        return this.form.get(name);
+    }
 
     ngOnInit(): void {
         this.setupForm();
@@ -55,9 +70,9 @@ export class ContactComponent implements OnInit, AfterViewInit {
 
     setupForm() {
         return this._fb.group({
-            name: ['', [Validators.required]],
+            name: ['', [Validators.required, Validators.maxLength(20)]],
             email: ['', [Validators.required, Validators.email]],
-            message: ['', [Validators.required]],
+            message: ['', [Validators.required, Validators.maxLength(200)]],
         });
     }
 
