@@ -3,19 +3,17 @@ import {
     AfterViewInit,
     ChangeDetectionStrategy,
     Component,
-    OnInit,
     inject,
 } from '@angular/core';
-import {
-    AbstractControl,
-    FormBuilder,
-    ReactiveFormsModule,
-    Validators,
-} from '@angular/forms';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import {
     CONTACT_FORM_ERROR_MESSAGES,
     Contact,
 } from '@modules/shared/data-access';
+import {
+    ERROR_MESSAGE_DATA,
+    FormErrorMessageComponent,
+} from '@modules/shared/ui/form-error-message';
 import { Map, map, marker, tileLayer } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { ContactService } from './contact.service';
@@ -23,31 +21,28 @@ import { ContactService } from './contact.service';
 @Component({
     selector: 'fm-contact',
     standalone: true,
-    imports: [CommonModule, ReactiveFormsModule],
+    imports: [CommonModule, ReactiveFormsModule, FormErrorMessageComponent],
     templateUrl: './contact.component.html',
     styleUrl: './contact.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    providers: [ContactService],
+    providers: [
+        ContactService,
+        {
+            provide: ERROR_MESSAGE_DATA,
+            useValue: CONTACT_FORM_ERROR_MESSAGES,
+        },
+    ],
 })
-export class ContactComponent implements OnInit, AfterViewInit {
+export class ContactComponent implements AfterViewInit {
     private _fb = inject(FormBuilder);
     private _service = inject(ContactService);
     private _viewportScroller = inject(ViewportScroller);
 
+    public errorList = inject(ERROR_MESSAGE_DATA);
+
     public map!: Map;
     public form = this.setupForm();
     public contacts$ = this._service.getContacts();
-
-    public errorList = CONTACT_FORM_ERROR_MESSAGES;
-
-    getControl(name: string): AbstractControl | null {
-        console.log('Get');
-        return this.form.get(name);
-    }
-
-    ngOnInit(): void {
-        this.setupForm();
-    }
 
     ngAfterViewInit(): void {
         this.setupMap();

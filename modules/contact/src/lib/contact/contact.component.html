@@ -45,38 +45,53 @@
     <form [formGroup]="form" (submit)="submitForm()">
         <div class="form-field">
             <input
+                #nameInput
                 type="text"
                 name="name"
                 placeholder="Name"
                 formControlName="name"
             />
 
-            @if (getControl('name'); as control) {
-                @if (control.invalid && control.touched) {}
-                <div class="form-error">{{ errorList['name'][0] }}</div>
+            @defer (on interaction(nameInput)) {
+                <fm-form-error-message
+                    [control]="form.controls.name"
+                    [errorList]="errorList['name']"
+                ></fm-form-error-message>
             }
         </div>
 
         <div class="form-field">
             <input
+                #emailInput
                 type="email"
                 name="email"
                 placeholder="Email"
                 formControlName="email"
             />
 
-            <!-- <div class="form-error">{{ getMessage('email') }}</div> -->
+            @defer (on interaction(emailInput)) {
+                <fm-form-error-message
+                    [control]="form.controls.email"
+                    [errorList]="errorList['email']"
+                ></fm-form-error-message>
+            }
         </div>
 
         <div class="form-field">
             <textarea
+                #messageInput
                 name="message"
                 rows="5"
                 placeholder="Message"
                 formControlName="message"
             ></textarea>
 
-            <!-- <div class="form-error">{{ getMessage('message') }}</div> -->
+            @defer (on interaction(messageInput)) {
+                <fm-form-error-message
+                    [control]="form.controls.message"
+                    [errorList]="errorList['message']"
+                ></fm-form-error-message>
+            }
         </div>
 
         <button type="submit" class="btn btn--action btn--action-only"></button>

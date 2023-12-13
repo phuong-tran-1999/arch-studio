@@ -32,6 +32,9 @@
                 "modules/shared/directives/swiper/src/index.ts"
             ],
             "@modules/shared/ui/card": ["modules/shared/ui/card/src/index.ts"],
+            "@modules/shared/ui/form-error-message": [
+                "modules/shared/ui/form-error-message/src/index.ts"
+            ],
             "@modules/shared/ui/single-breadcrumb": [
                 "modules/shared/ui/single-breadcrumb/src/index.ts"
             ],
