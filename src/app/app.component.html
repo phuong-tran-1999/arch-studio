@@ -1,3 +1,8 @@
 <fm-header></fm-header>
 <router-outlet></router-outlet>
-<fm-footer></fm-footer>
+
+@defer (on viewport) {
+    <fm-footer></fm-footer>
+} @placeholder {
+    <fm-skeleton height="100px"></fm-skeleton>
+}

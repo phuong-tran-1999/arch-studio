@@ -18,6 +18,10 @@
 -   (Typescript) Use type instead of interface
 -   (Code) code theo component, responsive component
 
+## Not finish
+-   Menu
+-   Form
+
 ## Start the app
 
 To start the development server run `nx serve arch-studio`. Open your browser and navigate to http://localhost:4200/. Happy coding!

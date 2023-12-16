@@ -13,4 +13,5 @@ import { Card } from '@modules/shared/data-access';
 })
 export class CardComponent {
     @Input({ required: true }) cardData!: Card;
+    @Input() hasCounter: boolean = false;
 }

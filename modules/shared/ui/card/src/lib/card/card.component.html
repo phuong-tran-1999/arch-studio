@@ -13,4 +13,8 @@
     </h3>
 
     <span class="card__description">{{ cardData.description }}</span>
+
+    @if (hasCounter) {
+        <div class="card__counter"></div>
+    }
 </article>

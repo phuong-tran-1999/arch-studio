@@ -54,4 +54,28 @@
         position: absolute;
         inset: 0;
     }
+
+    &__counter {
+        --_display: none;
+        display: var(--_display);
+
+        position: absolute;
+
+        right: 0;
+        top: 0;
+
+        &::after {
+            content: counter(card-counter);
+            counter-increment: card-counter;
+        }
+    }
+
+    @media (min-width: 768px) {
+        --_p-x: 2.5rem;
+        --_p-b: 2.5rem;
+
+        &__counter {
+            --_display: block;
+        }
+    }
 }

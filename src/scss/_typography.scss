@@ -21,9 +21,26 @@ p:not(:last-of-type) {
     letter-spacing: var(--_ls);
 
     &--xl {
-        --_fs: 15.625rem; // 250px
-        --_lh: 0.8;
-        --_ls: -5px;
+        --_fs: 7.5rem; // 250px
+        --_lh: 1.6;
+        --_ls: -3px;
+
+        --_display: none;
+
+        color: var(--clr-very-light-gray);
+        text-align: right;
+
+        display: var(--_display);
+
+        @media (min-width: 768px) {
+            --_display: block;
+        }
+
+        @media (min-width: 1440px) {
+            --_fs: 15.625rem; // 250px
+            --_lh: 0.8;
+            --_ls: -5x;
+        }
     }
 
     &--l {
@@ -41,14 +58,24 @@ p:not(:last-of-type) {
     }
 
     &--m {
-        --_fs: 4.5rem; // 72px
-        --_lh: 0.875;
-        --_ls: -2px;
+        --_fs: 3rem; // 48px;
+        --_lh: 1.2;
+        --_ls: -1.714px;
+
+        color: var(--clr-dark-blue);
+        margin-bottom: 1.5rem;
+
+        @media (min-width: 768px) {
+            --_fs: 4.5rem; // 72px
+            --_lh: 0.9;
+            --_ls: -2px;
+        }
     }
 
     &--decorative {
         --_decorative-gap: 4rem;
         --_decorative-height: 1px;
+
         margin-top: var(--_decorative-gap);
         position: relative;
         &::before {

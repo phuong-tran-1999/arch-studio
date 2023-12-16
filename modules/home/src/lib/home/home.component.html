@@ -1,28 +1,38 @@
-@if (slides$ | async; as slides) {
-    <swiper-container fmSwiper init="false" [swiperConfig]="config">
+<!-- @if (slides$ | async; as slides) {
+    <swiper-container
+        class="home__slider"
+        fmSwiper
+        init="false"
+        [swiperConfig]="config"
+    >
         @for (slide of slides; track slide.id) {
             <swiper-slide>
                 <section
                     [style.--_bg-img]="slide.imageURL"
-                    class="home__hero hero__menu-subsequence low-opacity-bg-image"
+                    class="home__hero low-opacity-bg-image"
                 >
                     <h3 class="heading heading--l">{{ slide.heading }}</h3>
 
-                    <p class="description line-clamp-4">
+                    <p class="description line-clamp-3">
                         {{ slide.description }}
                     </p>
 
-                    <a [routerLink]="slide.link" class="btn btn--action">
+                    <a
+                        [routerLink]="slide.link"
+                        class="btn btn--action hero-btn"
+                    >
                         See Our Portfolio
                     </a>
                 </section>
             </swiper-slide>
         }
     </swiper-container>
-}
+} -->
 
-<section class="home__welcome">
-    <h2 class="heading heading--l heading--decorative">
+<!-- <section class="home__welcome">
+    <h1 class="heading heading--xl">Welcome</h1>
+
+    <h2 class="heading heading--m heading--decorative">
         Welcome to Arch Studio
     </h2>
 
@@ -44,23 +54,31 @@
     </p>
 </section>
 
-<section
-    [style.--_bg-img]="heroImage2"
-    class="home__hero hero__full-height low-opacity-bg-image"
->
-    <h2 class="heading heading--l">Small team, big ideas</h2>
+<section class="home__intro">
+    <div
+        [style.--_bg-img]="heroImage2"
+        class="home__hero hero__full-height low-opacity-bg-image"
+    >
+        <h2 class="heading heading--m">Small team, big ideas</h2>
 
-    <a routerLink="/about-us" class="btn btn--action">About Us</a>
-</section>
+        <a routerLink="/about-us" class="btn btn--action">About Us</a>
+    </div>
+</section> -->
 
 <section class="home__featured">
-    <h2 class="heading heading--l">Featured</h2>
+    <div class="home__featured-start">
+        <h2 class="heading heading--m">Featured</h2>
+
+        <a routerLink="/portfolio" class="btn btn--action featured__cta-start">
+            See All
+        </a>
+    </div>
 
     @if (previewFeatured$ | async; as featured) {
         <div class="home__featured-layout">
             @for (item of featured; track item.id) {
                 @defer (on viewport) {
-                    <fm-card [cardData]="item"></fm-card>
+                    <fm-card [cardData]="item" [hasCounter]="true"></fm-card>
                 } @placeholder (minimum 500ms) {
                     <fm-skeleton height="248px" />
                 }
@@ -68,5 +86,7 @@
         </div>
     }
 
-    <a routerLink="/portfolio" class="btn btn--action"> See All </a>
+    <a routerLink="/portfolio" class="btn btn--action featured__cta-end">
+        See All
+    </a>
 </section>

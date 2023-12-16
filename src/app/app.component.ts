@@ -1,3 +1,4 @@
+import { SkeletonComponent } from '@modules/shared/ui/skeleton';
 import { HttpClientModule } from '@angular/common/http';
 import {
     AfterViewInit,
@@ -11,7 +12,13 @@ import { register } from 'swiper/element/bundle';
 
 @Component({
     standalone: true,
-    imports: [RouterModule, FooterComponent, HeaderComponent, HttpClientModule],
+    imports: [
+        RouterModule,
+        FooterComponent,
+        HeaderComponent,
+        HttpClientModule,
+        SkeletonComponent,
+    ],
     selector: 'arch-studio-root',
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',

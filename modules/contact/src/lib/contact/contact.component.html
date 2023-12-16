@@ -2,7 +2,7 @@
     <img src="assets/images/contact-1.webp" alt="" srcset="" />
 
     <div class="banner-content">
-        <h2 class="heading heading--l">Tell us about your project</h2>
+        <h2 class="heading heading--m">Tell us about your project</h2>
 
         <p>
             We'd love to hear more about your project. Please, leave a message
@@ -13,7 +13,7 @@
 </section>
 
 <section class="contact__detail">
-    <h2 class="heading heading--l heading--decorative">Contact Details</h2>
+    <h2 class="heading heading--m heading--decorative">Contact Details</h2>
 
     @for (contact of contacts$ | async; track contact.name) {
         <div class="contact__info">
@@ -40,7 +40,7 @@
 <section id="map" class="contact__map"></section>
 
 <section class="contact__form">
-    <h2 class="heading heading--l">Connect with us</h2>
+    <h2 class="heading heading--m">Connect with us</h2>
 
     <form [formGroup]="form" (submit)="submitForm()">
         <div class="form-field">
