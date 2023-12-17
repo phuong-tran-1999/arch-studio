@@ -1,4 +1,3 @@
-import { SkeletonComponent } from '@modules/shared/ui/skeleton';
 import { HttpClientModule } from '@angular/common/http';
 import {
     AfterViewInit,
@@ -8,6 +7,8 @@ import {
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from '@module/shared/layout/footer';
 import { HeaderComponent } from '@module/shared/layout/header';
+import { SingleBreadcrumbComponent } from '@modules/shared/ui/single-breadcrumb';
+import { SkeletonComponent } from '@modules/shared/ui/skeleton';
 import { register } from 'swiper/element/bundle';
 
 @Component({
@@ -18,6 +19,7 @@ import { register } from 'swiper/element/bundle';
         HeaderComponent,
         HttpClientModule,
         SkeletonComponent,
+        SingleBreadcrumbComponent,
     ],
     selector: 'arch-studio-root',
     templateUrl: './app.component.html',

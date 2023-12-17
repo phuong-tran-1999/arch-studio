@@ -4,7 +4,7 @@ import { Card } from '@modules/shared/data-access';
 import { Observable } from 'rxjs';
 
 @Injectable()
-export class FortfolioService {
+export class PortfolioService {
     private _httpService = inject(HttpClient);
 
     getAllProjects(): Observable<Card[]> {

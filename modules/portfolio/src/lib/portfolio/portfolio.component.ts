@@ -1,8 +1,13 @@
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { CommonModule, ViewportScroller } from '@angular/common';
+import {
+    AfterViewInit,
+    ChangeDetectionStrategy,
+    Component,
+    inject,
+} from '@angular/core';
 import { CardComponent } from '@modules/shared/ui/card';
 import { SkeletonComponent } from '@modules/shared/ui/skeleton';
-import { FortfolioService } from './portfolio.service';
+import { PortfolioService } from './portfolio.service';
 
 @Component({
     selector: 'fm-home',
@@ -11,10 +16,15 @@ import { FortfolioService } from './portfolio.service';
     templateUrl: './portfolio.component.html',
     styleUrl: './portfolio.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    providers: [FortfolioService],
+    providers: [PortfolioService],
 })
-export class PortfolioComponent {
-    private _service = inject(FortfolioService);
+export class PortfolioComponent implements AfterViewInit {
+    private _service = inject(PortfolioService);
+    private _viewportScroller = inject(ViewportScroller);
 
     public projects$ = this._service.getAllProjects();
+
+    ngAfterViewInit(): void {
+        this._viewportScroller.scrollToPosition([0, 0]);
+    }
 }

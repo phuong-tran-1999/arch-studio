@@ -1,0 +1,29 @@
+.wrapper {
+    --_display: none;
+
+    display: var(--_display);
+    align-items: center;
+    color: var(--clr-light-gray);
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+
+    position: absolute;
+    left: 2rem;
+
+    writing-mode: vertical-lr;
+
+    &::before {
+        content: '';
+        display: block;
+        height: 100px;
+        width: 1px;
+        background-color: currentColor;
+        margin-bottom: 3rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        --_display: flex;
+    }
+}

@@ -1,9 +1,15 @@
 <footer>
-    <img src="assets/images/arch-logo-dark.svg" alt="Dark Logo" />
+    <a class="logo" routerLink="/">
+        <img
+            src="assets/images/arch-logo-dark.svg"
+            alt="Logo"
+            loading="eager"
+        />
+    </a>
 
-    <a routerLink="/fortfolio">Fortfolio</a>
+    <a routerLink="/portfolio">Portfolio</a>
     <a routerLink="/about-us">About Us</a>
     <a routerLink="/contact">Contact</a>
 
-    <button class="btn btn--action">See Our Portfolio</button>
+    <a class="btn btn--action" routerLink="/portfolio">See Our Portfolio</a>
 </footer>

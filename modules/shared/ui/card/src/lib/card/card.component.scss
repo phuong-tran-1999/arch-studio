@@ -61,12 +61,21 @@
 
         position: absolute;
 
-        right: 0;
-        top: 0;
+        right: 1rem;
+        top: 1rem;
 
         &::after {
+            --_fs: 15.625rem; // 250px
+            --_lh: 1;
+
             content: counter(card-counter);
             counter-increment: card-counter;
+
+            font-weight: var(--fw-bold);
+            font-size: var(--_fs);
+            line-height: var(--_lh);
+
+            opacity: 0.5;
         }
     }
 
