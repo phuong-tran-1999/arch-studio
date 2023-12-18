@@ -37,11 +37,17 @@
 <section class="about-us__leader">
     <h2 class="heading heading--m">The Leaders</h2>
 
-    @for (leader of leaders$ | async; track leader.id) {
-        <div>
-            <img class="about-us__leader-img" [src]="leader.imageURL" alt="" />
-            <h3 class="heading">{{ leader.name }}</h3>
-            <div>{{ leader.designation }}</div>
-        </div>
-    }
+    <div class="about-us__leader-list">
+        @for (leader of leaders$ | async; track leader.id) {
+            <div class="about-us__leader-item">
+                <img
+                    class="about-us__leader-img"
+                    [src]="leader.imageURL"
+                    alt=""
+                />
+                <h3 class="heading">{{ leader.name }}</h3>
+                <div>{{ leader.designation }}</div>
+            </div>
+        }
+    </div>
 </section>

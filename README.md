@@ -19,8 +19,10 @@
 -   (Code) code theo component, responsive component
 
 ## Not finish
+
 -   Menu
 -   Form
+-   Banner Responsive
 
 ## Start the app
 

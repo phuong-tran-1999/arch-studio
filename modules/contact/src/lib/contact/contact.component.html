@@ -17,13 +17,15 @@
 
     @for (contact of contacts$ | async; track contact.name) {
         <div class="contact__info">
-            <h4 class="sub-heading">{{ contact.name }}</h4>
+            <div class="main-part">
+                <h4 class="sub-heading">{{ contact.name }}</h4>
 
-            <address>
-                <div>Mail: {{ contact.mail }}</div>
-                <div>Address: {{ contact.address }}</div>
-                <div>Phone: {{ contact.phone }}</div>
-            </address>
+                <address>
+                    <div>Mail: {{ contact.mail }}</div>
+                    <div>Address: {{ contact.address }}</div>
+                    <div>Phone: {{ contact.phone }}</div>
+                </address>
+            </div>
 
             <button
                 (click)="viewOnMap(contact)"
@@ -37,7 +39,9 @@
     }
 </section>
 
-<section id="map" class="contact__map"></section>
+<section class="contact__map-wrapper">
+    <div id="map" class="contact__map"></div>
+</section>
 
 <section class="contact__form">
     <h2 class="heading heading--m">Connect with us</h2>

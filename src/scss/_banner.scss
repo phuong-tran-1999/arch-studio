@@ -1,4 +1,9 @@
 .banner {
+    --_p-x: 0;
+    --_p-y: 0;
+
+    padding: var(--_p-y) var(--_p-x);
+
     &-content {
         --_p-l: var(--spacing-master-mob);
         --_p-r: 0;
@@ -13,5 +18,12 @@
         margin-top: var(--_m-t);
         background-color: white;
         isolation: isolate;
+    }
+}
+
+@media (min-width: 768px) {
+    .banner {
+        --_p-x: var(--spacing-master-tab);
+        --_p-y: 1.5rem;
     }
 }
