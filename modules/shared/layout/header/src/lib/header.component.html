@@ -4,9 +4,15 @@
     </a>
 
     <nav class="main-nav">
-        <a routerLink="/portfolio">Portfolio</a>
-        <a routerLink="/about-us">About Us</a>
-        <a routerLink="/contact">Contact</a>
+        <a routerLink="/portfolio" routerLinkActive="link--active" class="link"
+            >Portfolio</a
+        >
+        <a routerLink="/about-us" routerLinkActive="link--active" class="link"
+            >About Us</a
+        >
+        <a routerLink="/contact" routerLinkActive="link--active" class="link"
+            >Contact</a
+        >
     </nav>
 
     <button class="menu-trigger" [cdkMenuTriggerFor]="menu">
@@ -20,8 +26,29 @@
 
 <ng-template #menu>
     <nav cdkMenu class="menu">
-        <a routerLink="/portfolio" cdkMenuItem class="heading">Portfolio</a>
-        <a routerLink="/about-us" cdkMenuItem class="heading">About Us</a>
-        <a routerLink="/contact" cdkMenuItem class="heading">Contact</a>
+        <a
+            routerLink="/portfolio"
+            routerLinkActive="link--active"
+            class="link"
+            cdkMenuItem
+            class="heading"
+            >Portfolio</a
+        >
+        <a
+            routerLink="/about-us"
+            routerLinkActive="link--active"
+            class="link"
+            cdkMenuItem
+            class="heading"
+            >About Us</a
+        >
+        <a
+            routerLink="/contact"
+            routerLinkActive="link--active"
+            class="link"
+            cdkMenuItem
+            class="heading"
+            >Contact</a
+        >
     </nav>
 </ng-template>

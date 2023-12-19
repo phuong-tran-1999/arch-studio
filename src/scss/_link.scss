@@ -1,0 +1,18 @@
+.link {
+    --_color: --clr-dark-blue;
+    color: var(--_color);
+    position: relative;
+
+    &:hover {
+        --_color: var(--clr-dark-blue);
+    }
+
+    &--active::after {
+        position: absolute;
+        content: '';
+        border-width: 1px;
+        bottom: -0.5rem;
+        left: 25%;
+        width: 50%;
+    }
+}

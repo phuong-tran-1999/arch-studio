@@ -6,6 +6,7 @@
 @import url('./_typography.scss') layer(component);
 @import url('./_layout.scss') layer(component);
 @import url('./_button.scss') layer(component);
+@import url('./_link.scss') layer(component);
 @import url('./_image.scss') layer(component);
 @import url('./_banner.scss') layer(component);
 @import url('./_form.scss') layer(component);
