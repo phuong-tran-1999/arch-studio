@@ -23,6 +23,7 @@
 -   Menu
 -   Form
 -   Banner Responsive
+-   Slider Desktop Pagination
 
 ## Start the app
 

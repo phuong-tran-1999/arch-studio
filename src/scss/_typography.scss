@@ -36,7 +36,7 @@ p:not(:last-of-type) {
             --_display: block;
         }
 
-        @media (min-width: 1440px) {
+        @media (min-width: 1280px) {
             --_fs: 15.625rem; // 250px
             --_lh: 0.8;
             --_ls: -5x;
@@ -86,6 +86,7 @@ p:not(:last-of-type) {
             height: var(--_decorative-height);
             width: var(--_decorative-gap);
             background-color: currentColor;
+            z-index: -1;
         }
     }
 }

@@ -62,3 +62,9 @@ header {
         --_display: flex;
     }
 }
+
+@media (min-width: 1280px) {
+    header {
+        --_p-x: var(--spacing-master-des);
+    }
+}

@@ -1,7 +1,7 @@
 footer {
     --_m-r: 0;
     --_m-l: 0;
-    --_offset: calc(var(--_m-r) * -1);
+    --_offset: 0;
 
     --_p-x: 4rem;
     --_p-y: 3rem;
@@ -53,5 +53,14 @@ footer {
         --_p-y: 0;
 
         --_m-r: 10rem;
+        --_offset: -10rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    footer {
+        --_m-r: 18rem;
+        --_m-l: var(--spacing-master-des);
+        --_offset: -8rem;
     }
 }

@@ -87,4 +87,8 @@
             --_display: block;
         }
     }
+
+    @media (min-width: 1280px) {
+        --_p-t: 30rem;
+    }
 }
