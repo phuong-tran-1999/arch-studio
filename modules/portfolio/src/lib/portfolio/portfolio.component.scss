@@ -12,6 +12,8 @@
         padding: var(--_p-y) var(--_p-x);
         display: var(--_display);
         flex-direction: column;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-auto-rows: minmax(0, 1fr);
         gap: var(--_gap);
     }
 }
@@ -21,6 +23,16 @@
         &__layout {
             --_p-x: var(--spacing-master-tab);
             --_p-y: 1.5rem;
+        }
+    }
+}
+
+@media (min-width: 1280px) {
+    .portfolio {
+        &__layout {
+            --_p-x: var(--spacing-master-des);
+            // --_p-y: 1.5rem;
+            --_display: grid;
         }
     }
 }

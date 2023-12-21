@@ -1,6 +1,6 @@
-import { RouterModule } from '@angular/router';
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { Card } from '@modules/shared/data-access';
 
 @Component({

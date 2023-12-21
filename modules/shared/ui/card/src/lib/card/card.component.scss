@@ -1,3 +1,7 @@
+:host {
+    display: flex;
+}
+
 .card {
     --_img-height: 240px;
     --_clr: var(--clr-white);
@@ -8,6 +12,10 @@
     position: relative;
     padding: var(--_p-t) var(--_p-x) var(--_p-b);
     color: var(--_clr);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: 1;
 
     img {
         object-fit: cover;
