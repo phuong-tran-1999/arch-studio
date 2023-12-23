@@ -27,3 +27,9 @@
         --_p-y: 1.5rem;
     }
 }
+
+@media (min-width: 1280px) {
+    .banner {
+        --_p-x: var(--spacing-master-des);
+    }
+}

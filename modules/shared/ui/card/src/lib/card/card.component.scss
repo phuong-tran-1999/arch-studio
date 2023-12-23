@@ -71,6 +71,7 @@
 
         right: 1rem;
         top: 1rem;
+        z-index: -1;
 
         &::after {
             --_fs: 15.625rem; // 250px

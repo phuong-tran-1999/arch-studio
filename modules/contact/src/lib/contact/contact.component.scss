@@ -83,3 +83,26 @@
         --_p-x: var(--spacing-master-tab);
     }
 }
+
+@media (min-width: 1280px) {
+    .contact__detail {
+        --_p-x: var(--spacing-master-des);
+    }
+
+    .contact__info {
+        --_p-x: var(--spacing-master-des);
+    }
+
+    .contact__map {
+        // --_height: 30rem;
+        // height: var(--_height);
+
+        &-wrapper {
+            --_p-x: var(--spacing-master-des);
+        }
+    }
+
+    .contact__form {
+        --_p-x: var(--spacing-master-des);
+    }
+}

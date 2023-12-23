@@ -70,3 +70,13 @@
         }
     }
 }
+
+@media (min-width: 1280px) {
+    .about-us__heritage {
+        --_p-x: var(--spacing-master-des);
+    }
+
+    .about-us__leader {
+        --_p-x: var(--spacing-master-des);
+    }
+}
