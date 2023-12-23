@@ -24,6 +24,7 @@
 -   Form
 -   Banner Responsive
 -   Slider Desktop Pagination
+-   Complete Animation
 
 ## Start the app
 

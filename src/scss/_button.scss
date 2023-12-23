@@ -7,6 +7,7 @@
     --_bg: var(--clr-dark-blue);
     --_bg-hover: var(--clr-dark-gray);
     --_bg-active: var(--clr-light-gray);
+    --_text-decoration: none;
 
     display: flex;
     justify-content: space-between;
@@ -22,10 +23,12 @@
     color: var(--_clr);
     background-color: var(--_bg);
     text-transform: capitalize;
+    text-decoration: var(--_text-decoration);
     font-weight: var(--fw-bold);
 
     &:hover {
         --_bg: var(--_bg-hover);
+        --_text-decoration: underline;
     }
 
     &:active {
