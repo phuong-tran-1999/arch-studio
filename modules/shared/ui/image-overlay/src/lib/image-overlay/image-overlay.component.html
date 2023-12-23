@@ -1,0 +1,7 @@
+<div class="content">
+    <div class="content-overlay"></div>
+    <img class="content-image" [src]="imageURL" alt="" />
+    <div class="content-details" [ngClass]="'fadeIn-' + direction">
+        <ng-content></ng-content>
+    </div>
+</div>

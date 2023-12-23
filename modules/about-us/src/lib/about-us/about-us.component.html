@@ -14,24 +14,33 @@
 </section>
 
 <section class="about-us__heritage">
-    <h2 class="heading heading--m heading--decorative">Our Heritage</h2>
+    <div class="about-us__heritage-info">
+        <h2 class="heading heading--m heading--decorative">Our Heritage</h2>
 
-    <p>
-        Founded in 2007, we started as a trio of architects. Our complimentary
-        skills and relentless attention to detail turned Arch into one of the
-        most sought after boutique firms in the country.
-    </p>
+        <p>
+            Founded in 2007, we started as a trio of architects. Our
+            complimentary skills and relentless attention to detail turned Arch
+            into one of the most sought after boutique firms in the country.
+        </p>
 
-    <p>
-        Speciliazing in Urban Design allowed us to focus on creating exceptional
-        structures that live in harmony with their surroundings. We consider
-        every detail from every surrounding element to inform our designs.
-    </p>
+        <p>
+            Speciliazing in Urban Design allowed us to focus on creating
+            exceptional structures that live in harmony with their surroundings.
+            We consider every detail from every surrounding element to inform
+            our designs.
+        </p>
 
-    <p>
-        Our small team of world-class professionals provides input on every
-        project.
-    </p>
+        <p>
+            Our small team of world-class professionals provides input on every
+            project.
+        </p>
+    </div>
+
+    <img
+        class="about-us__heritage-img"
+        src="/assets/images/about-2.webp"
+        alt=""
+    />
 </section>
 
 <section class="about-us__leader">
@@ -40,11 +49,25 @@
     <div class="about-us__leader-list">
         @for (leader of leaders$ | async; track leader.id) {
             <div class="about-us__leader-item">
-                <img
+                <!-- <img
                     class="about-us__leader-img"
                     [src]="leader.imageURL"
                     alt=""
-                />
+                /> -->
+                <fm-image-overlay
+                    class="about-us__leader-img"
+                    [imageURL]="leader.imageURL"
+                >
+                    <div class="about-us__leader-item-overlay">
+                        <a routerLink="./"
+                            ><img src="/assets/icons/linkedin-icon.svg" alt=""
+                        /></a>
+                        <a routerLink="./"
+                            ><img src="/assets/icons/twitter-icon.svg" alt=""
+                        /></a>
+                    </div>
+                </fm-image-overlay>
+
                 <h3 class="heading">{{ leader.name }}</h3>
                 <div>{{ leader.designation }}</div>
             </div>
