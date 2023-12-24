@@ -8,17 +8,16 @@
     --_bg-hover: var(--clr-dark-gray);
     --_bg-active: var(--clr-light-gray);
     --_text-decoration: none;
+    --_justify-content: space-between;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: var(--_justify-content);
     align-items: center;
 
     max-width: 252px;
 
     gap: var(--_gap);
     padding: var(--_p-y) var(--_p-x);
-    // margin-left: auto;
-    // margin-right: auto;
 
     color: var(--_clr);
     background-color: var(--_bg);
@@ -46,6 +45,22 @@
         }
     }
 
+    &--pagination {
+        --_clr: var(--clr-medium-gray);
+        --_bg: var(--clr-white);
+        --_p-x: 0;
+
+        &:hover,
+        &:active {
+            --_bg: var(--clr-very-light-gray);
+        }
+
+        &-active {
+            --_bg: var(--clr-dark-blue);
+            --_clr: var(--clr-white);
+        }
+    }
+
     &--action {
         &::after {
             content: '';
@@ -66,5 +81,9 @@
         &-only {
             --_p-x: 1.5rem;
         }
+    }
+
+    &--center {
+        --_justify-content: center;
     }
 }

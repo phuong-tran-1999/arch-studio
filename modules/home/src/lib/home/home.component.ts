@@ -1,4 +1,3 @@
-import { SkeletonComponent } from '@modules/shared/ui/skeleton';
 import { CommonModule } from '@angular/common';
 import {
     CUSTOM_ELEMENTS_SCHEMA,
@@ -9,6 +8,7 @@ import {
 import { RouterModule } from '@angular/router';
 import { SwiperDirective } from '@modules/shared/directives/swiper';
 import { CardComponent } from '@modules/shared/ui/card';
+import { SkeletonComponent } from '@modules/shared/ui/skeleton';
 import { SwiperOptions } from 'swiper/types';
 import { HomeService } from './home.service';
 
@@ -36,7 +36,7 @@ export class HomeComponent {
         pagination: false,
         slidesPerView: 1,
         centeredSlides: true,
-        loop: true,
+        // loop: true,
     };
     public heroImage2 = 'url(/assets/images/home-2.webp)';
 

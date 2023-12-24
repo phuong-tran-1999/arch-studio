@@ -22,7 +22,6 @@
 
 -   Menu
 -   Form
--   Slider Desktop Pagination
 -   Complete Animation
 -   Reuse css custom props
 
