@@ -1,8 +1,20 @@
 .banner {
-    --_p-x: 0;
-    --_p-y: 0;
+    --_p-t: 0;
+    --_p-b: 0;
+    --_p-l: 0;
+    --_p-r: 0;
 
-    padding: var(--_p-y) var(--_p-x);
+    position: relative;
+    padding: var(--_p-t) var(--_p-r) var(--_p-b) var(--_p-l);
+
+    img {
+        --_width: auto;
+        --_height: auto;
+
+        width: var(--_width);
+        height: var(--_height);
+        object-fit: cover;
+    }
 
     &-content {
         --_p-l: var(--spacing-master-mob);
@@ -13,23 +25,83 @@
         --_m-t: -2.5rem;
         --_m-r: 2rem;
 
+        --_width: unset;
+        --_display: block;
+
         padding: var(--_p-t) var(--_p-r) var(--_p-b) var(--_p-l);
         margin-right: var(--_m-r);
         margin-top: var(--_m-t);
         background-color: white;
         isolation: isolate;
+
+        bottom: 0;
+        right: 0;
+
+        width: var(--_width);
+        position: var(--_position);
+    }
+
+    .heading--xl {
+        --_display: none;
+        --_position: static;
+        --_right: 0;
+
+        display: var(--_display);
+        position: var(--_position);
+
+        top: -5rem;
+        right: var(--_right);
     }
 }
 
 @media (min-width: 768px) {
     .banner {
-        --_p-x: var(--spacing-master-tab);
-        --_p-y: 1.5rem;
+        --_p-l: var(--spacing-master-tab);
+        --_p-r: var(--spacing-master-tab);
+        --_p-t: 1.5rem;
+        --_p-b: 7.5rem;
+
+        img {
+            --_height: 620px;
+        }
+
+        &-content {
+            --_p-l: var(--spacing-master-tab);
+            --_p-r: var(--spacing-master-tab);
+            --_p-t: var(--spacing-master-tab);
+            --_m-r: 0;
+
+            --_width: 80%;
+            --_position: absolute;
+        }
+
+        .heading--xl {
+            --_display: block;
+            --_position: absolute;
+            --_right: var(--spacing-master-tab);
+        }
     }
 }
 
 @media (min-width: 1280px) {
     .banner {
-        --_p-x: var(--spacing-master-des);
+        --_p-l: var(--spacing-master-des);
+        --_p-r: 0;
+
+        img {
+            --_width: 50%;
+        }
+
+        &-content {
+            --_p-l: var(--spacing-master-des);
+            --_p-r: var(--spacing-master-des);
+            --_p-t: var(--spacing-master-des);
+
+            --_width: 60%;
+        }
+
+        .heading--xl {
+            --_right: var(--spacing-master-des);
+        }
     }
 }

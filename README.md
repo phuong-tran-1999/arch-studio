@@ -22,9 +22,9 @@
 
 -   Menu
 -   Form
--   Banner Responsive
 -   Slider Desktop Pagination
 -   Complete Animation
+-   Reuse css custom props
 
 ## Start the app
 
