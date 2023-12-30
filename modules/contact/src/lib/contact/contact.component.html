@@ -58,12 +58,11 @@
                 formControlName="name"
             />
 
-            @defer (on interaction(nameInput)) {
-                <fm-form-error-message
-                    [control]="form.controls.name"
-                    [errorList]="errorList['name']"
-                ></fm-form-error-message>
-            }
+            <fm-form-error-message
+                class="form-error"
+                [control]="form.controls.name"
+                [errorList]="errorList['name']"
+            ></fm-form-error-message>
         </div>
 
         <div class="form-field">
@@ -75,12 +74,11 @@
                 formControlName="email"
             />
 
-            @defer (on interaction(emailInput)) {
-                <fm-form-error-message
-                    [control]="form.controls.email"
-                    [errorList]="errorList['email']"
-                ></fm-form-error-message>
-            }
+            <fm-form-error-message
+                class="form-error"
+                [control]="form.controls.email"
+                [errorList]="errorList['email']"
+            ></fm-form-error-message>
         </div>
 
         <div class="form-field">
@@ -92,12 +90,11 @@
                 formControlName="message"
             ></textarea>
 
-            @defer (on interaction(messageInput)) {
-                <fm-form-error-message
-                    [control]="form.controls.message"
-                    [errorList]="errorList['message']"
-                ></fm-form-error-message>
-            }
+            <fm-form-error-message
+                class="form-error"
+                [control]="form.controls.message"
+                [errorList]="errorList['message']"
+            ></fm-form-error-message>
         </div>
 
         <button type="submit" class="btn btn--action btn--action-only"></button>

@@ -1,17 +1,9 @@
-<!-- @if (control.touched && errors().length > 0) {
+@if (messages$ | async; as messages) {
     @if (mode === 'single') {
-        <div class="form-error">{{ errors()[0] }}</div>
+        <div class="error-message">{{ messages[0] }}</div>
     } @else {
-        @for (error of errors(); track $index) {
-            <div class="form-error">{{ error }}</div>
+        @for (error of messages; track $index) {
+            <div class="error-message">{{ error }}</div>
         }
-    }
-} -->
-
-@if (mode === 'single') {
-    <div class="form-error">{{ errors()[0] }}</div>
-} @else {
-    @for (error of errors(); track $index) {
-        <div class="form-error">{{ error }}</div>
     }
 }

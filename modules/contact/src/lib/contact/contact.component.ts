@@ -86,6 +86,13 @@ export class ContactComponent implements AfterViewInit {
     }
 
     submitForm() {
-        console.log(this.form.value);
+        this.form.markAllAsTouched();
+
+        if (this.form.invalid) return;
+
+        console.log('Form Valid!', this.form.value);
+
+        this.form.reset();
+        window.alert('Submit successfully!');
     }
 }

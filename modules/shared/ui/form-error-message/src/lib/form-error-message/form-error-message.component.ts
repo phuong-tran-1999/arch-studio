@@ -2,17 +2,19 @@ import { CommonModule } from '@angular/common';
 import {
     ChangeDetectionStrategy,
     Component,
-    Injector,
     Input,
     OnInit,
-    Signal,
-    computed,
-    inject,
-    runInInjectionContext,
 } from '@angular/core';
-import { toSignal } from '@angular/core/rxjs-interop';
-import { FormControl, FormControlStatus } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 import { ErrorMessage } from '@modules/shared/data-access';
+import {
+    Observable,
+    combineLatest,
+    debounceTime,
+    distinctUntilChanged,
+    map,
+    startWith,
+} from 'rxjs';
 import { ErrorDisplayMode } from './form-error-message.type';
 
 @Component({
@@ -26,37 +28,24 @@ import { ErrorDisplayMode } from './form-error-message.type';
 export class FormErrorMessageComponent implements OnInit {
     @Input({ required: true }) control!: FormControl;
     @Input({ required: true }) errorList!: ErrorMessage;
+
+    // It's so weird, Angular Form Control doesn't get multiple error anymore!
     @Input() mode: ErrorDisplayMode = 'single';
 
-    injector = inject(Injector);
-
-    errors!: Signal<string[]>;
-    statusStream!: Signal<FormControlStatus>;
+    messages$!: Observable<string[]>;
 
     ngOnInit(): void {
-        // Will change in v18, signal based input
-        runInInjectionContext(this.injector, () => {
-            console.log('this.control', this.control);
-            this.statusStream = toSignal(this.control.statusChanges, {
-                initialValue: this.control.status,
-            });
-
-            this.errors = computed(() => {
-                console.log(
-                    'status change',
-                    this.statusStream(),
-                    this.control.touched,
-                );
-
-                if (this.statusStream() !== 'INVALID' || !this.control.touched)
-                    return [];
-
-                return this.collectErrors(this.control);
-            });
-        });
+        this.messages$ = combineLatest([
+            this.control.statusChanges.pipe(startWith(this.control.status)),
+            this.control.valueChanges.pipe(
+                debounceTime(300),
+                distinctUntilChanged(),
+                startWith(this.control.getRawValue()),
+            ),
+        ]).pipe(map(() => this._collectErrors(this.control)));
     }
 
-    collectErrors(control: FormControl): string[] {
+    _collectErrors(control: FormControl): string[] {
         const errorObj = control.errors;
         if (!errorObj) return [];
 
