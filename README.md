@@ -20,8 +20,9 @@
 
 ## Not finish
 
--   Menu
+-   Menu (abandoned)
 -   Complete Animation
+-   SSR
 -   Reuse css custom props
 
 ## Start the app
