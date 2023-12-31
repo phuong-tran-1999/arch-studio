@@ -8,3 +8,27 @@
     margin-right: auto;
     width: 100%; // prevent overflow
 }
+
+@supports (animation-timeline: scroll(root)) {
+    .progress {
+        height: 5px;
+        background: var(--clr-foreground);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform-origin: 0 50%;
+        animation: scaleProgress auto linear;
+        animation-timeline: scroll(root);
+        z-index: 9999;
+    }
+
+    @keyframes scaleProgress {
+        0% {
+            transform: scaleX(0);
+        }
+        100% {
+            transform: scaleX(1);
+        }
+    }
+}

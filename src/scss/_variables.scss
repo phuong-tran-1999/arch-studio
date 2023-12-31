@@ -7,6 +7,7 @@
     --clr-very-light-gray: #eeeff4;
     --clr-error: #df5656;
     --clr-white: #fff;
+    --clr-foreground: blue;
 
     // Typography
     // --ff: 'League Spartan', sans-serif;
@@ -18,4 +19,7 @@
     --spacing-master-des: 10rem;
     --spacing-master-tab: 6rem;
     --spacing-master-mob: 2rem;
+
+    // Others
+    --transition-time: 250ms;
 }

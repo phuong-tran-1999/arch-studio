@@ -25,6 +25,7 @@ import { register } from 'swiper/element/bundle';
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
+    // animations: [fadeInOutAnimation],
 })
 export class AppComponent implements AfterViewInit {
     ngAfterViewInit(): void {

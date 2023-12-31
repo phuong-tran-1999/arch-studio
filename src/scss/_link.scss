@@ -1,18 +1,33 @@
 .link {
     --_color: --clr-dark-blue;
+    --_width-scale: 0;
+
     color: var(--_color);
     position: relative;
 
-    &:hover {
-        --_color: var(--clr-dark-blue);
-    }
-
-    &--active::after {
+    &::after {
         position: absolute;
         content: '';
         border-width: 1px;
         bottom: -0.5rem;
         left: 25%;
         width: 50%;
+
+        // Transition
+        scale: var(--_width-scale) 1;
+        transition: scale 250ms;
+    }
+
+    &:hover {
+        --_color: var(--clr-dark-blue);
+        --_width-scale: 2;
+    }
+
+    &--active {
+        --_width-scale: 1;
+    }
+
+    &--active:hover {
+        --_width-scale: 2;
     }
 }

@@ -25,6 +25,13 @@
 -   SSR
 -   Reuse css custom props
 
+## Animation / Transition / Effect Used
+
+-   Hover effect on nav links
+-   Button hover color transition
+-   View Transition v17
+-   Scroll Progress Indicator
+
 ## Start the app
 
 To start the development server run `nx serve arch-studio`. Open your browser and navigate to http://localhost:4200/. Happy coding!

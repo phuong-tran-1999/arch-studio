@@ -10,6 +10,7 @@
 @import url('./_image.scss') layer(component);
 @import url('./_banner.scss') layer(component);
 @import url('./_form.scss') layer(component);
+@import url('./_animation.scss') layer(component);
 @import '@angular/cdk/overlay-prebuilt.css' layer(component);
 @import 'swiper/css';
 
