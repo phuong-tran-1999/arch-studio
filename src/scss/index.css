@@ -1,17 +1,7 @@
 @layer reset, base, component, utitlity;
 
-@import url('./_reset.scss') layer(reset);
-@import url('./_variables.scss') layer(reset);
-
-@import url('./_typography.scss') layer(component);
-@import url('./_layout.scss') layer(component);
-@import url('./_button.scss') layer(component);
-@import url('./_link.scss') layer(component);
-@import url('./_image.scss') layer(component);
-@import url('./_banner.scss') layer(component);
-@import url('./_form.scss') layer(component);
-@import url('./_animation.scss') layer(component);
-@import '@angular/cdk/overlay-prebuilt.css' layer(component);
-@import 'swiper/css';
-
-@import url('./_utility.scss') layer(utitlity);
+@import './base/index.scss' layer(reset);
+@import './global/index.scss' layer(component);
+@import './components/index.scss' layer(component);
+@import './vendor/index.scss' layer(component);
+@import './utility/index.scss' layer(utitlity);
