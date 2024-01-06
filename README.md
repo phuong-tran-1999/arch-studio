@@ -21,7 +21,7 @@
 ## Not finish
 
 -   Menu (abandoned)
--   Complete Animation
+-   Complete Animation (partial)
 -   SSR
 -   Reuse css custom props
 
