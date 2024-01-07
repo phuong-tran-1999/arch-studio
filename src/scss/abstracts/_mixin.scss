@@ -1,0 +1,35 @@
+@mixin v-padding($t: null, $r: null, $b: null, $l: null) {
+    @if $t {
+        --_p-t: #{$t};
+    }
+
+    @if $r {
+        --_p-r: #{$r};
+    }
+
+    @if $b {
+        --_p-b: #{$b};
+    }
+
+    @if $l {
+        --_p-l: #{$l};
+    }
+}
+
+@mixin v-margin($t: null, $r: null, $b: null, $l: null) {
+    @if $t {
+        --_m-t: #{$t};
+    }
+
+    @if $r {
+        --_m-r: #{$r};
+    }
+
+    @if $b {
+        --_m-b: #{$b};
+    }
+
+    @if $l {
+        --_m-l: #{$l};
+    }
+}

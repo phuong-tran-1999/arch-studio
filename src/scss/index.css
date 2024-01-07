@@ -3,5 +3,5 @@
 @import './base/index.scss' layer(reset);
 @import './global/index.scss' layer(component);
 @import './components/index.scss' layer(component);
-@import './vendor/index.scss' layer(component);
+@import './vendors/index.scss' layer(component);
 @import './utility/index.scss' layer(utitlity);

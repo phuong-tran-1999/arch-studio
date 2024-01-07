@@ -1,8 +1,7 @@
+@use '../abstracts' as *;
+
 .banner {
-    --_p-t: 0;
-    --_p-b: 0;
-    --_p-l: 0;
-    --_p-r: 0;
+    @include v-padding(0, 0, 0, 0);
 
     position: relative;
     padding: var(--_p-t) var(--_p-r) var(--_p-b) var(--_p-l);
@@ -17,13 +16,8 @@
     }
 
     &-content {
-        --_p-l: var(--spacing-master-mob);
-        --_p-r: 0;
-        --_p-t: 4rem;
-        --_p-b: 4.5rem;
-
-        --_m-t: -2.5rem;
-        --_m-r: 2rem;
+        @include v-padding(4rem, 0, 4.5rem, 2rem);
+        @include v-margin(-2.5rem, 2rem);
 
         --_width: unset;
         --_display: block;
@@ -56,19 +50,24 @@
 
 @media (min-width: 768px) {
     .banner {
-        --_p-l: var(--spacing-master-tab);
-        --_p-r: var(--spacing-master-tab);
-        --_p-t: 1.5rem;
-        --_p-b: 7.5rem;
+        @include v-padding(
+            1.5rem,
+            var(--spacing-master-tab),
+            7.5rem,
+            var(--spacing-master-tab)
+        );
 
         img {
             --_height: 620px;
         }
 
         &-content {
-            --_p-l: var(--spacing-master-tab);
-            --_p-r: var(--spacing-master-tab);
-            --_p-t: var(--spacing-master-tab);
+            @include v-padding(
+                $t: var(--spacing-master-tab),
+                $r: var(--spacing-master-tab),
+                $l: var(--spacing-master-tab)
+            );
+
             --_m-r: 0;
 
             --_width: 80%;

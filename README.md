@@ -22,8 +22,8 @@
 
 -   Menu (abandoned)
 -   Complete Animation (partial)
--   SSR
--   Reuse css custom props
+-   SSR (doi 17.1)
+-   Reuse css custom props (thua)
 
 ## Animation / Transition / Effect Used
 

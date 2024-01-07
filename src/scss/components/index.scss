@@ -1,5 +1,5 @@
-@import 'button';
-@import 'link';
-@import 'image';
-@import 'banner';
-@import 'form';
+@forward 'button';
+@forward 'link';
+@forward 'image';
+@forward 'banner';
+@forward 'form';
