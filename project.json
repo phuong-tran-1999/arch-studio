@@ -23,6 +23,11 @@
                         "input": "modules/shared/assets/src/lib",
                         "glob": "**/*",
                         "output": "assets"
+                    },
+                    {
+                        "input": "./node_modules/leaflet/dist/images/",
+                        "glob": "**/*",
+                        "output": "./"
                     }
                 ],
                 "styles": ["./src/styles.scss"],
@@ -50,9 +55,7 @@
                             "maximumError": "4kb"
                         }
                     ],
-                    "outputHashing": "all",
-                    "ssr": false,
-                    "prerender": false
+                    "outputHashing": "all"
                 },
                 "development": {
                     "optimization": false,
